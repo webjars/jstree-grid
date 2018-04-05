@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>jstree-grid</artifactId>
-    <version>3.9.3-SNAPSHOT</version>
+    <version>3.9.3</version>
     <name>jsTreeGrid</name>
     <description>WebJar for jsTreeGrid</description>
     <url>http://webjars.org</url>
@@ -33,7 +33,7 @@
         <developer>
             <id>mouratos66</id>
             <name>Philip Fortomas</name>
-            <email></email>
+            <email />
         </developer>
     </developers>
 
@@ -49,7 +49,7 @@
         <url>http://github.com/webjars/jstree-grid</url>
         <connection>scm:git:https://github.com/webjars/jstree-grid.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/jstree-grid.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>jstree-grid-3.9.3</tag>
     </scm>
 
     <dependencies>
@@ -92,13 +92,13 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <echo message="download archive"/>
-                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip"/>
-                                <echo message="unzip archive"/>
-                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
-                                <echo message="moving resources"/>
+                                <echo message="download archive" />
+                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip" />
+                                <echo message="unzip archive" />
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
+                                <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/${project.artifactId}-${version.unsnapshot}"/>
+                                    <fileset dir="${project.build.directory}/${project.artifactId}-${version.unsnapshot}" />
                                 </move>
                             </target>
                         </configuration>
